@@ -3,31 +3,38 @@
 
 from matplotlib.colors import cnames
 
-
+#%%
 def list_to_dict(some_list: list) -> dict:
     # TODO: Transformer la liste en dictionnaire, les éléments de la liste deviennent les clés et leur index deviennent les valeurs
+    d={}
+    for i in range(len(some_list)):
+        d[f"{some_list[i]}"]=i
+    return d
 
-    return {}
-
+#%%
 
 def color_name_to_hex(colors: list) -> list:
     # TODO: Trouver la valeur hex de chaque couleur dans la liste et créer une liste de tupple où le premier élément est le nom de la couleur et le deuxième est la valeur hex
-
+    
     return []
 
-
+#%%
 def create_list() -> list:
     # TODO: Créer une liste des 10 000 premiers entiers positif, sauf pour les entiers de 15 à 350
+    l=[]
+    for i in range(1,15):
+        l.append(i)
+    for i in range(351,10001):
+        l.append(i)
+    return l
 
-    return []
-
-
+#%%
 def compute_mse(model_dict: dict) -> dict:
     # TODO: Calculer l'erreur quadratique moyen pour chaque modèle. Retourner un dictionnaire contenant les MSE.
-
+    
     return {}
 
-
+#%%
 def main() -> None:
     some_list = ["a", "b", "z", "patate"]
     print(f"La liste suivante {some_list} est transformée en dictionnaire: {list_to_dict(some_list)}")
